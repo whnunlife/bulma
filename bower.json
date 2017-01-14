@@ -6,7 +6,7 @@
     "jgthms <bbxdesign@gmail.com>"
   ],
   "description": "Modern CSS framework based on Flexbox",
-  "main": "bulma.sass",
+  "main": "bulma.scss",
   "keywords": [
     "css",
     "sass",
@@ -17,8 +17,10 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
+    "**/*.sass",
     "node_modules",
     "bower_components",
+    "sass",
     "test",
     "tests",
     "docs",

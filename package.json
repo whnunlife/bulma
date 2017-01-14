@@ -1,18 +1,18 @@
 {
-  "name": "bulma",
+  "name": "bulma-scss",
   "version": "0.3.0",
   "homepage": "http://bulma.io",
   "author": "Jeremy Thomas <bbxdesign@gmail.com> (http://jgthms.com)",
-  "description": "Modern CSS framework based on Flexbox",
-  "main": "bulma.sass",
+  "description": "Modern CSS framework based on Flexbox, converted to SCSS",
+  "main": "bulma.scss",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jgthms/bulma.git"
+    "url": "git+https://github.com/CyCoreSystems/bulma.git"
   },
   "license": "MIT",
   "keywords": [
     "css",
-    "sass",
+    "scss",
     "flexbox",
     "responsive",
     "framework"
@@ -27,22 +27,11 @@
     "postcss-cli": "^2.5.1"
   },
   "scripts": {
-    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix",
-    "build-autoprefix": "postcss --use autoprefixer --output css/bulma.css css/bulma.css",
-    "build-clean": "rm -rf css",
-    "build-sass": "node-sass --output-style expanded --source-map true bulma.sass css/bulma.css",
-    "deploy": "npm run build && npm run docs",
-    "docs": "npm run docs-sass && npm run docs-autoprefix",
-    "docs-autoprefix": "postcss --use autoprefixer --output docs/css/bulma-docs.css docs/css/bulma-docs.css",
-    "docs-sass": "node-sass --output-style expanded docs/bulma-docs.sass docs/css/bulma-docs.css",
-    "start": "npm run build-sass -- --watch",
-    "start-docs": "npm run docs-sass -- --watch",
-    "start-test": "npm run test-sass -- --watch",
-    "test-sass": "node-sass --output-style expanded docs/bulma-test.sass docs/css/bulma-test.css"
+    "convert": "rm -Rf scss; sass-convert -R ./ -F sass -T scss; cp -a sass scss; find ./scss -name '*.sass' -exec {} ;"
   },
   "files": [
-    "css",
     "sass",
+    "scss",
     "bulma.sass",
     "LICENSE",
     "README.md"
