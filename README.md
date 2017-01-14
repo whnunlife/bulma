@@ -1,5 +1,5 @@
 
-This is an SCSS implementation of Bulma.io.  Install with: 
+This is an SCSS implementation of Bulma.io, packaged for use with Meteor.  Install with: 
 
 ### NPM
 
@@ -13,6 +13,7 @@ Then include in your main .scss file with:
 @import "{}/node_modules/bulma-scss/bulma.scss"; 
 ```
 
+## See the original:
 
 # [Bulma](http://bulma.io)
 
