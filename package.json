@@ -20,19 +20,12 @@
   "bugs": {
     "url": "https://github.com/jgthms/bulma/issues"
   },
-  "devDependencies": {
-    "autoprefixer": "^6.3.3",
-    "captain-git-hook": "~1.0.5",
-    "node-sass": "^3.4.2",
-    "postcss-cli": "^2.5.1"
-  },
   "scripts": {
-    "convert": "rm -Rf scss; sass-convert -R ./ -F sass -T scss; cp -a sass scss; find ./scss -name '*.sass' -exec {} ;"
+    "convert": "rm -Rf scss; sass-convert -R ./ -F sass -T scss; cp -a sass scss; find ./scss -name '*.sass' -exec {} ; echo 'TODO: update import references'"
   },
   "files": [
-    "sass",
     "scss",
-    "bulma.sass",
+    "bulma.scss",
     "LICENSE",
     "README.md"
   ]

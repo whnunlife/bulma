@@ -1,0 +1,6 @@
+/.editorconfig
+/.git/
+/.github/
+/.gitignore
+*.sass
+/sass
